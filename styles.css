@@ -1,0 +1,700 @@
+/* ========================================
+   VARIABLES GLOBALES
+   ======================================== */
+:root {
+    --color-primary: red;
+    --color-secondary: black;
+    --color-text: white;
+    --color-bg-section: rgba(136, 0, 0, 0.9);
+    --shadow: 0 2px 10px red;
+    --border: 2px solid red;
+    --font-small: 0.875rem;     /* 14px */
+    --font-base: 1rem;          /* 16px */
+    --font-large: 1.25rem;      /* 20px */
+    --font-xl: 1.875rem;        /* 30px */
+    --font-xxl: 2.5rem;         /* 40px */
+    --spacing-xs: 0.3125rem;    /* 5px */
+    --spacing-sm: 0.625rem;     /* 10px */
+    --spacing-md: 0.9375rem;    /* 15px */
+    --spacing-lg: 1.25rem;      /* 20px */
+    --spacing-xl: 1.875rem;     /* 30px */
+    --spacing-xxl: 3.75rem;     /* 60px */
+}
+
+/* ========================================
+   RESET Y BASE
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   WALLPAPER
+   ======================================== */
+.wallpaper {
+    background-image: url('imagenes/wallpaper-index.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    margin: 0;
+    flex: 1;
+}
+
+.wallpaper::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* ========================================
+   NAVBAR
+   ======================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-secondary);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.logo {
+    width: 50px;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.bran {
+    color: var(--color-text);
+    font-weight: bold;
+    font-size: var(--font-base);
+}
+
+.nav-links {
+    display: flex;
+    gap: var(--spacing-lg);
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-text);
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li a:hover {
+    color: var(--color-primary);
+    border-bottom: var(--border);
+}
+
+.nav-center {
+    display: flex;
+    gap: var(--spacing-xl);
+    list-style: none;
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+.nav-center li {
+    position: relative;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.nav-center a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.nav-center a:hover {
+    color: var(--color-primary);
+}
+
+/* DROPDOWN */
+.dropdown-menu {
+    position: absolute;
+    top: var(--spacing-xl);
+    left: 0;
+    background: var(--color-secondary);
+    padding: var(--spacing-sm) 0;
+    min-width: 150px;
+    list-style: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: var(--spacing-sm);
+}
+
+.dropdown-menu li a {
+    color: var(--color-text);
+}
+
+.dropdown-menu li a:hover {
+    color: var(--color-primary);
+}
+
+/* DERECHA */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    color: var(--color-text);
+}
+
+/* BOTÓN */
+.buy-btn {
+    border: 1px solid var(--color-primary);
+    background: var(--color-secondary);
+    color: var(--color-text);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+/* ========================================
+   PROYECTOS
+   ======================================== */
+.project-container {
+    display: grid;
+    gap: 90px;
+    margin-top: 1rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 250px);
+}
+
+.project-card {
+    background: var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: var(--shadow);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-container p,
+.project-container a {
+    color: var(--color-text);
+    font-size: var(--font-large);
+    transition: all 0.5s ease;
+}
+
+.project-card:hover,
+.project-card:hover a,
+.project-card:hover p {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* ========================================
+   SECCIONES
+   ======================================== */
+.section {
+    padding: var(--spacing-xxl) var(--spacing-lg);
+    background-color: var(--color-bg-section);
+    transform: translateY(20px);
+    border-radius: 10px;
+    margin: 40px 20px;
+    transition: all 0.5s ease;
+    box-shadow: 0px 2px 10px rgb(136, 0, 0);
+}
+
+.section:hover {
+    background: var(--color-primary);
+    box-shadow: 0px 2px 10px var(--color-primary);
+}
+
+/* Barra negra que cambia a rojo al hacer hover en la sección */
+.section h2 {
+    position: relative;
+    padding-left: var(--spacing-md);
+    transition: padding-left 0.3s ease;
+    color: var(--color-text);
+    font-size: var(--font-xl);
+}
+
+.section h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.section:hover h2::before {
+    background-color: var(--color-secondary);
+    width: 6px;
+}
+
+.section p {
+    color: var(--color-text);
+    font-size: var(--font-large);
+}
+
+section a {
+    color: var(--color-text);
+    text-decoration: solid;
+    font-size: var(--font-xl);
+    transition: all 0.5s ease;
+}
+
+section a:hover {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+/* ========================================
+   CONTACTO
+   ======================================== */
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    background: var(--color-secondary);
+    padding: var(--spacing-lg);
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: var(--color-text);
+    margin-bottom: var(--spacing-xs);
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: var(--spacing-sm);
+    font-size: var(--font-large);
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-secondary);
+    background: var(--color-text);
+    transition: all 0.3s ease;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    font-size: var(--font-large);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 9px var(--color-primary);
+    border: var(--border);
+    outline: none;
+}
+
+.contact-form button {
+    padding: var(--spacing-sm);
+    background: var(--color-secondary);
+    color: var(--color-text);
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+/* ========================================
+   MASCOTAS
+   ======================================== */
+.pet-section {
+    text-align: center;
+    flex: 1;
+}
+
+.pet-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: var(--spacing-lg) 0;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    max-width: 100%;
+}
+
+.pet-img:hover {
+    transform: scale(1.05);
+}
+
+.pet-section p {
+    color: var(--color-text);
+    max-width: 500px;
+    margin: auto;
+    font-size: var(--font-large);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.pet-card {
+    width: 220px;
+    text-align: center;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: var(--color-secondary);
+    border-top: var(--border);
+    margin-top: 40px;
+    margin-bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-left p {
+    color: var(--color-text);
+    margin: 0;
+}
+
+.footer-right {
+    display: flex;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.footer-right a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-right a:hover {
+    color: var(--color-primary);
+}
+
+.footer-right i {
+    margin-right: var(--spacing-xs);
+}
+
+/* ========================================
+   DETALLES
+   ======================================== */
+details summary {
+    cursor: pointer;
+    margin: var(--spacing-xs);
+    color: var(--color-text);
+}
+
+details summary:hover {
+    text-decoration: underline;
+}
+
+details p {
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-small);
+}
+
+main, .pet-section {
+    flex: 1;
+}
+
+/* ========================================
+   MEDIA QUERIES - MÓVILES (max-width: 768px)
+   ======================================== */
+@media (max-width: 768px) {
+    
+    /* Menú en columna */
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 10px;
+    }
+    
+    .nav-center {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    /* Dropdown en móvil - se muestra siempre */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-top: var(--spacing-xs);
+        background: #1a0000;
+    }
+    
+    /* Proyectos en 1 columna */
+    .project-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+    
+    /* Galería en 2 columnas */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .pet-card {
+        width: 100%;
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    
+    /* Ajustes de fuente */
+    .section h2 {
+        font-size: var(--font-large);
+    }
+    
+    .section p {
+        font-size: var(--font-base);
+    }
+    
+    .pet-img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
+    
+    /* Footer en columna */
+    .footer {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+    
+    .footer-right {
+        justify-content: center;
+    }
+    
+    /* Formulario */
+    .contact-form {
+        margin: 0 var(--spacing-sm);
+        max-width: 100%;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - TABLETS (769px - 1024px)
+   ======================================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    /* Proyectos en 2 columnas */
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    /* Galería en 3 columnas */
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Ajustes de navbar */
+    .navbar {
+        flex-wrap: wrap;
+    }
+    
+    /* Footer responsivo */
+    .footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - ESCRITORIO (min-width: 1025px)
+   ======================================== */
+@media (min-width: 1025px) {
+    
+    /* Galería en 4 columnas */
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .project-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ========================================
+   ESTILOS PARA LA CALCULADORA
+   ======================================== */
+.calculadora-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-lg);
+    background: transparent;
+    box-shadow: none;
+}
+
+.calculadora-section:hover {
+    background: transparent;
+    box-shadow: none;
+}
+
+.calculadora-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.747);
+    border: var(--border);
+    box-shadow: 0 0 15px var(--color-primary);
+    border-radius: 0;
+}
+
+.calculadora-pantalla {
+    padding: var(--spacing-lg);
+    border-bottom: var(--border);
+}
+
+.calculadora-pantalla input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: var(--color-text);
+    font-size: var(--font-xxl);
+    text-align: right;
+    padding: var(--spacing-sm);
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+.calculadora-pantalla input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.calculadora-botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+.calc-btn {
+    background: rgba(0, 0, 0, 0.24);
+    border: 1px solid var(--color-primary);
+    color: var(--color-text);
+    font-size: 1.8rem;
+    padding: var(--spacing-lg);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: monospace;
+    border-radius: 0;
+}
+
+.calc-btn:hover {
+    background: rgba(255, 0, 0, 0.541);
+    color: var(--color-secondary);
+}
+
+.operador {
+    background: #1a00009a;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.operador:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.limpiar {
+    background: #1a000069;
+    color: var(--color-primary);
+}
+
+.limpiar:hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.igual {
+    grid-column: span 4;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.igual:hover {
+    background: #cc0000;
+    color: var(--color-text);
+}

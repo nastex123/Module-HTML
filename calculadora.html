@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Brandon Carranza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="wallpaper">
+
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="../imagenes/logo.jpg" class="logo">
+        <span class="bran">Brandon Carranza</span>
+    </div>
+
+    <ul class="nav-center">
+        <li class="dropdown">
+            PROYECTOS ▼
+            <ul class="dropdown-menu">
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+                <li><a href="https://www.canva.com/" target="_blank">Canva</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            MASCOTAS ▼
+            <ul class="dropdown-menu">
+                <li><a href="mascotas.html">Hernesto</a></li>
+                <li><a href="mascotas.html">Zagorso</a></li>
+                <li><a href="mascotas.html">Pitagoras</a></li>
+            </ul>
+        </li>
+
+        <li><a href="../index.html#contact">CONTACTO</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="../index.html">Atras</a></li>
+        </ul>
+        <button class="buy-btn" onclick="location.href='donaciones.html'">DONACIONES</button>
+        <i class="bi bi-search"></i>
+        <span>CUENTA ▼</span>
+    </div>
+</nav>
+
+<section class="section calculadora-section">
+    <div class="calculadora-container">
+        <div class="calculadora-pantalla">
+            <div class="calculadora-fila">
+                <input type="text" id="num1" class="calc-input" placeholder="Numero 1">
+            </div>
+            <div class="calculadora-fila">
+                <input type="text" id="operador" class="calc-input operador-input" placeholder="Operador (+, -, *, /)" maxlength="1">
+            </div>
+            <div class="calculadora-fila">
+                <input type="text" id="num2" class="calc-input" placeholder="Numero 2">
+            </div>
+            <div class="calculadora-fila">
+                <input type="text" id="pantalla" class="calc-input resultado-input" readonly placeholder="Resultado">
+            </div>
+        </div>
+        <div class="calculadora-botones">
+            <button class="calc-btn" data-valor="7">7</button>
+            <button class="calc-btn" data-valor="8">8</button>
+            <button class="calc-btn" data-valor="9">9</button>
+            <button class="calc-btn operador" data-valor="/">/</button>
+            
+            <button class="calc-btn" data-valor="4">4</button>
+            <button class="calc-btn" data-valor="5">5</button>
+            <button class="calc-btn" data-valor="6">6</button>
+            <button class="calc-btn operador" data-valor="*">*</button>
+            
+            <button class="calc-btn" data-valor="1">1</button>
+            <button class="calc-btn" data-valor="2">2</button>
+            <button class="calc-btn" data-valor="3">3</button>
+            <button class="calc-btn operador" data-valor="-">-</button>
+            
+            <button class="calc-btn" data-valor="0">0</button>
+            <button class="calc-btn" data-valor=".">.</button>
+            <button class="calc-btn limpiarTodo" data-valor="AC">AC</button>
+            <button class="calc-btn operador" data-valor="+">+</button>
+            
+            <button class="calc-btn igual" data-valor="=">=</button>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p>Hecho por Brandon</p>
+    </div>
+    <div class="footer-right">
+        <a href="#"><i class="bi bi-facebook"></i> Brandusio</a>
+        <a href="#"><i class="bi bi-instagram"></i> @Brandon_Rangell</a>
+        <a href="#"><i class="bi bi-twitter-x"></i> @NastexYT</a>
+        <a href="#"><i class="bi bi-spotify"></i> Spotify</a>
+    </div>
+</footer>
+
+<script src="calculadora.js"></script>
+
+</body>
+</html>

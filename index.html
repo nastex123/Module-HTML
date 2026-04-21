@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon Carranza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="wallpaper">
+
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="imagenes/logo.jpg" class="logo" alt="Logo Brandon Carranza">
+            <span class="bran">Brandon Carranza</span>
+        </div>
+
+        <ul class="nav-center">
+            <li class="dropdown">
+                PROYECTOS ▼
+                <ul class="dropdown-menu">
+                    <li><a href="calculadora.html" target="_blank">Calculadora</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+                    <li><a href="https://www.canva.com/" target="_blank">Canva</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                MASCOTAS ▼
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.corazonpeludito.org/" target="_blank">Adoptar</a></li>
+                    <li><a href="mascotas.html">Ver mascotas</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#contact">CONTACTO</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button class="buy-btn" onclick="location.href='donaciones.html'">DONACIONES</button>
+            <i class="bi bi-search"></i>
+            <span>CUENTA ▼</span>
+        </div>
+    </nav>
+</header>
+
+<section id="about" class="section">
+    <div>
+        <h2>Sobre mi</h2>
+        <p>Simplemente soy uno mas, nacido de la nada. No busco el estrepito de los aplausos ni la firmeza de las verdades absolutas, pues entiendo que mi propia existencia es apenas un suspiro en el devenir de los siglos.</p>
+        <br>
+        <p>Me considero un observador de lo invisible, un artesano que no trabaja con madera o piedra, sino con la materia prima del pensamiento. Mi labor no es dar respuestas, sino habilitar las preguntas; entender que la duda no es un vacio, sino el espacio para que la razon respire.</p>
+        
+        <p>Ahora observa a mis <a href="mascotas.html">-- mascotas --</a></p>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>Proyectos</h2>
+    <div class="project-container">
+        <a href="calculadora.html" class="project-card" target="_blank">
+            <h3>Calculadora</h3>
+            <p>Una calculadora sencilla de la web</p>
+        </a>
+        
+        <a href="https://www.youtube.com/" class="project-card" target="_blank">
+            <h3>Youtube</h3>
+            <p>El proyecto pequeño de ver y compartir videos.</p>
+        </a>
+
+        <a href="https://www.canva.com/" class="project-card" target="_blank">
+            <h3>Canva</h3>
+            <p>Diseñador de imagenes con GUI facil y legible.</p>
+        </a>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contacto</h2>
+    <form class="contact-form" id="contactForm">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" id="nombre" placeholder="Tu Nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="TuCorreo@dominio.com" required>
+        </div>
+
+        <div class="form-group">
+            <label>Mensaje</label>
+            <textarea id="mensaje" placeholder="Coloca un comentario aqui" required></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p>Hecho por Brandon</p>
+    </div>
+    <div class="footer-right">
+        <a href="#"><i class="bi bi-facebook"></i> Brandusio</a>
+        <a href="#"><i class="bi bi-instagram"></i> @Brandon_Rangell</a>
+        <a href="#"><i class="bi bi-twitter-x"></i> @NastexYT</a>
+        <a href="#"><i class="bi bi-spotify"></i> Spotify</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
