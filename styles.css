@@ -42,7 +42,7 @@ body {
    WALLPAPER
    ======================================== */
 .wallpaper {
-    background-image: url('imagenes/wallpaper-index.jpg');
+    background-image: url('imagenes/wallpaper-index.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -606,6 +606,18 @@ main, .pet-section {
     box-shadow: none;
 }
 
+/* Contenedor principal de la pantalla */
+.calculadora-fila-unica {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    align-items: center;
+    justify-content: space-between;
+    gap: 1px; /* Espacio entre los cuadritos */
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1); /* Opcional: un fondo ligero */
+    border-radius: 8px;
+}
+
 .calculadora-section:hover {
     background: transparent;
     box-shadow: none;
@@ -613,7 +625,7 @@ main, .pet-section {
 
 .calculadora-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     background: rgba(0, 0, 0, 0.747);
     border: var(--border);
     box-shadow: 0 0 15px var(--color-primary);
@@ -631,10 +643,30 @@ main, .pet-section {
     border: none;
     color: var(--color-text);
     font-size: var(--font-xxl);
-    text-align: right;
+    text-align: center;
     padding: var(--spacing-sm);
     box-sizing: border-box;
     font-family: monospace;
+}
+
+/* Ajuste de los inputs para que no se amontonen */
+.calc-input {
+    width: 250% !important; /* Ajusta el tamaño para que quepan 4 elementos */
+    text-align: center;
+    padding: 8px 2px;
+    font-size: 1.5rem;
+}
+
+/* El input del operador puede ser más pequeño */
+.operador-input {
+    width: 100% !important;
+}
+
+/* Estilo para el símbolo de igual */
+.calc-simbolo {
+    font-weight: bold;
+    color: #fff;
+    font-size: 5rem;
 }
 
 .calculadora-pantalla input:focus {
@@ -697,4 +729,94 @@ main, .pet-section {
 .igual:hover {
     background: #cc0000;
     color: var(--color-text);
+}
+
+/* ========================================
+   ACORDEON PARA MASCOTAS
+   ======================================== */
+.accordion {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.accordion-btn {
+    width: 100%;
+    background: black;
+    color: white;
+    border: 1px solid red;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: monospace;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.accordion-btn:hover {
+    background: red;
+    color: black;
+}
+
+.accordion-btn i {
+    transition: transform 0.3s ease;
+}
+
+.accordion-btn.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.accordion-content p {
+    margin: 10px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.accordion-content strong {
+    color: red;
+}
+
+/* ========================================
+   BOTON VOLVER ARRIBA
+   ======================================== */
+.scroll-top {
+    position: fixed;
+    bottom: 3.5rem;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: black;
+    color: red;
+    border: 2px solid red;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 10px red;
+}
+
+.scroll-top:hover {
+    background: red;
+    color: black;
+    transform: scale(1.1);
+}
+
+.scroll-top i {
+    font-size: 1.5rem;
 }

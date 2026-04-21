@@ -50,19 +50,15 @@
 <section class="section calculadora-section">
     <div class="calculadora-container">
         <div class="calculadora-pantalla">
-            <div class="calculadora-fila">
-                <input type="text" id="num1" class="calc-input" placeholder="Numero 1">
-            </div>
-            <div class="calculadora-fila">
-                <input type="text" id="operador" class="calc-input operador-input" placeholder="Operador (+, -, *, /)" maxlength="1">
-            </div>
-            <div class="calculadora-fila">
-                <input type="text" id="num2" class="calc-input" placeholder="Numero 2">
-            </div>
-            <div class="calculadora-fila">
-                <input type="text" id="pantalla" class="calc-input resultado-input" readonly placeholder="Resultado">
-            </div>
-        </div>
+    <div class="calculadora-fila-unica">
+        <input type="text" id="num1" class="calc-input" placeholder="N1">
+        <span class="calc-simbolo"></span> 
+        <input type="text" id="operador" class="calc-input operador-input" placeholder="Op" maxlength="1">
+        <input type="text" id="num2" class="calc-input" placeholder="N2">
+        <span class="calc-simbolo">=</span>
+        <input type="text" id="pantalla" class="calc-input resultado-input" readonly placeholder="Res">
+    </div>
+</div>
         <div class="calculadora-botones">
             <button class="calc-btn" data-valor="7">7</button>
             <button class="calc-btn" data-valor="8">8</button>
@@ -101,7 +97,7 @@
     </div>
 </footer>
 
-<script src="calculadora.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
