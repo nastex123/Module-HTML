@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="wallpaper">
+
+<header>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="imagenes/logo.jpg" class="logo" alt="Brandon Carranza Logo">
+            <span class="bran">Brandon Carranza</span>
+        </div>
+
+        <ul class="nav-center">
+            <li class="dropdown">
+                PROJECTS ▼
+                <ul class="dropdown-menu">
+                    <li><a href="calculadora.html" target="_blank">Calculator</a></li>
+                    <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                    <li><a href="https://www.canva.com/" target="_blank">Canva</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                PETS ▼
+                <ul class="dropdown-menu">
+                    <li><a href="https://www.corazonpeludito.org/" target="_blank">Adopt</a></li>
+                    <li><a href="mascotas.html">View Pets</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button class="buy-btn" onclick="location.href='donaciones.html'">DONATIONS</button>
+            <i class="bi bi-search"></i>
+            <span>ACCOUNT ▼</span>
+        </div>
+    </nav>
+</header>
+
+<section id="about" class="section">
+    <div>
+        <h2>About Me</h2>
+        <p>I am simply one more, born of nothing. I do not seek the clamor of applause nor the firmness of absolute truths, for I understand that my own existence is but a breath in the course of centuries.</p>
+        <br>
+        <p>I consider myself an observer of the invisible, a craftsman who works not with wood or stone, but with the raw material of thought. My task is not to provide answers, but to enable questions; to understand that doubt is not a vacuum, but the space for reason to breathe.</p>
+        
+        <p>Now take a look at my <a href="mascotas.html">-- pets --</a></p>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="project-container">
+        <a href="calculadora.html" class="project-card" target="_blank">
+            <h3>Calculator</h3>
+            <p>A simple web-based calculator.</p>
+        </a>
+        
+        <a href="https://www.youtube.com/" class="project-card" target="_blank">
+            <h3>YouTube</h3>
+            <p>The small project for watching and sharing videos.</p>
+        </a>
+
+        <a href="https://www.canva.com/" class="project-card" target="_blank">
+            <h3>Canva</h3>
+            <p>Image designer with an easy and readable GUI.</p>
+        </a>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <form class="contact-form" id="contactForm">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" id="nombre" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="YourEmail@domain.com" required>
+        </div>
+
+        <div class="form-group">
+            <label>Message</label>
+            <textarea id="mensaje" placeholder="Leave a comment here" required></textarea>
+        </div>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p>Made by Brandon</p>
+    </div>
+    <div class="footer-right">
+        <a href="https://github.com/nastex123/Module-HTML.git" target="_blank"><i class="bi bi-github"></i> Brandusio</a>
+        <a href="#"><i class="bi bi-instagram"></i> @Brandon_Rangell</a>
+        <a href="#"><i class="bi bi-twitter-x"></i> @NastexYT</a>
+        <a href="#"><i class="bi bi-spotify"></i> Spotify</a>
+    </div>
+</footer>
+
+<div class="scroll-top" id="scrollTop">
+    <i class="bi bi-arrow-up"></i>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

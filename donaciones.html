@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations - Brandon Carranza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="wallpaper">
+
+<nav class="navbar">
+    <div class="nav-left">
+        <img src="imagenes/logo.jpg" class="logo">
+        <span class="bran">Brandon Carranza</span>
+    </div>
+
+    <ul class="nav-center">
+        <li class="dropdown">
+            PROJECTS ▼
+            <ul class="dropdown-menu">
+                <li><a href="calculadora.html">Calculator</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+                <li><a href="https://www.canva.com/" target="_blank">Canva</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            PETS ▼
+            <ul class="dropdown-menu">
+                <li><a href="mascotas.html">Hernesto</a></li>
+                <li><a href="mascotas.html">Zagorso</a></li>
+                <li><a href="mascotas.html">Pythagoras</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <button class="buy-btn" onclick="location.href='donaciones.html'">DONATIONS</button>
+        <i class="bi bi-search"></i>
+        <span>ACCOUNT ▼</span>
+    </div>
+</nav>
+
+<!-- Section: Why donate? -->
+<section class="section">
+    <h2><i class="bi bi-question-circle"></i> Why should you donate?</h2>
+    <p>Your donation is not just a number, it is an act of will that transcends the material. In a world where noise and haste envelop us, donating is a reminder that empathy still exists.</p>
+    <p>Each contribution, no matter how small, represents the spark that ignites projects, ideas, and dreams. You don't donate out of charity, you donate because you believe in a future where knowledge and creativity are accessible to all.</p>
+    <p>As Seneca said: <em>"It is not that we have little time, but that we lose much"</em>. Your time and resources, placed in our hands, become tools to build, not to consume.</p>
+</section>
+
+<!-- Section: What do we do with the money? -->
+<section class="section">
+    <h2><i class="bi bi-piggy-bank"></i> What do we do with the money?</h2>
+    <p>Transparency is our pact. Every peso donated goes to:</p>
+    <ul style="color: white; font-size: 20px; margin-top: 20px; list-style: none; padding-left: 0;">
+        <li><i class="bi bi-server"></i> <strong>Site maintenance</strong> - Servers, domains, and security.</li>
+        <li><i class="bi bi-code-square"></i> <strong>Development of free projects</strong> - Open tools for everyone.</li>
+        <li><i class="bi bi-heart"></i> <strong>Care of our pets</strong> - Food, veterinary care, and animal welfare.</li>
+        <li><i class="bi bi-book"></i> <strong>Education and outreach</strong> - Philosophical and technical content without barriers.</li>
+    </ul>
+    <p style="margin-top: 20px;">We do not keep the money. Money is movement, it is flow. We receive it and transform it into immediate action.</p>
+</section>
+
+<!-- Section: How do we help? -->
+<section class="section">
+    <h2><i class="bi bi-hand-thumbs-up"></i> How do we help with your donation?</h2>
+    <p>When you donate, you not only support a website. You become part of a network that:</p>
+    <ul style="color: white; font-size: 20px; margin-top: 20px; list-style: none; padding-left: 0;">
+        <li><i class="bi bi-tree"></i> <strong>Plants seeds of critical thinking</strong> - Through reflective content.</li>
+        <li><i class="bi bi-tools"></i> <strong>Builds free tools</strong> - Open source for everyone.</li>
+        <li><i class="bi bi-shield-heart"></i> <strong>Rescues and protects animals</strong> - Our pets are family.</li>
+        <li><i class="bi bi-globe"></i> <strong>Shares knowledge at no cost</strong> - Because information should be free.</li>
+    </ul>
+    <p>We don't change the world alone. But together, donation after donation, we light a flame that dispels the darkness of indifference.</p>
+</section>
+
+<!-- Section: Donation Form -->
+<section class="section">
+    <h2><i class="bi bi-credit-card"></i> Donation Form</h2>
+    <form class="contact-form" id="donacionForm">
+        <div class="form-group">
+            <label><i class="bi bi-person"></i> Full name</label>
+            <input type="text" id="nombre" placeholder="Your name" required>
+        </div>
+
+        <div class="form-group">
+            <label><i class="bi bi-envelope"></i> Email address</label>
+            <input type="email" id="email" placeholder="email@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label><i class="bi bi-cash-stack"></i> Donation amount (USD)</label>
+            <input type="number" id="monto" placeholder="Ex: 10, 25, 50" min="1" step="1" required>
+        </div>
+
+        <div class="form-group">
+            <label><i class="bi bi-chat-dots"></i> Message (optional)</label>
+            <textarea id="mensaje" placeholder="Leave us a message, we value your voice"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label><i class="bi bi-wallet2"></i> Payment method</label>
+            <select id="metodo" style="padding: 10px; border-radius: 5px; background: black; color: white; border: 1px solid red;">
+                <option value="tarjeta"><i class="bi bi-credit-card"></i> Credit/Debit card</option>
+                <option value="paypal"><i class="bi bi-paypal"></i> PayPal</option>
+                <option value="transferencia"><i class="bi bi-bank"></i> Bank transfer</option>
+                <option value="cripto"><i class="bi bi-currency-bitcoin"></i> Cryptocurrency</option>
+            </select>
+        </div>
+
+        <button type="submit"><i class="bi bi-gift"></i> DONATE NOW</button>
+    </form>
+    <p style="text-align: center; margin-top: 15px; font-size: 14px;">All donations are secure and confidential.</p>
+</section>
+
+<!-- Section: Thank you -->
+<section class="section" style="text-align: center;">
+    <h2><i class="bi bi-heart"></i> Thank you for coming this far</h2>
+    <p>It doesn't matter if you can't donate today. Your time, your attention, and your interest are already a gift.</p>
+    <p>But if you decide to take the step, remember: <strong>you are not buying anything, you are creating something</strong>.</p>
+    <p style="margin-top: 20px;"><a href="index.html" style="color: rgb(0, 0, 0);"><i class="bi bi-arrow-left"></i> Back to home</a></p>
+</section>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p>Made by Brandon</p>
+    </div>
+    <div class="footer-right">
+        <a href="https://github.com/nastex123/Module-HTML.git" target="_blank"><i class="bi bi-github"></i> Brandusio</a>
+        <a href="#"><i class="bi bi-instagram"></i> @Brandon_Rangell</a>
+        <a href="#"><i class="bi bi-twitter-x"></i> @NastexYT</a>
+        <a href="#"><i class="bi bi-spotify"></i> Spotify</a>
+    </div>
+</footer>
+
+<!-- Scroll to top button -->
+<div class="scroll-top" id="scrollTop">
+    <i class="bi bi-arrow-up"></i>
+</div>
+
+<script src="script.js">
+    document.getElementById('donacionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const monto = document.getElementById('monto').value;
+        alert(`Thank you ${nombre} for your donation of $${monto} USD. You will receive an email with the details.`);
+        this.reset();
+    });
+</script>
+
+</body>
+</html>

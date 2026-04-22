@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Brandon Carranza</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="wallpaper">
+
+<header>
+    <nav class="navbar">
+    <div class="nav-left">
+        <img src="imagenes/logo.jpg" class="logo">
+        <span class="bran">Brandon Carranza</span>
+    </div>
+
+    <ul class="nav-center">
+        <li class="dropdown">
+            PROJECTS ▼
+            <ul class="dropdown-menu">
+                <li><a href="calculadora.html">Calculator</a></li>
+                <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+                <li><a href="https://www.canva.com/" target="_blank">Canva</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            PETS ▼
+            <ul class="dropdown-menu">
+                <li><a href="mascotas.html">Hernesto</a></li>
+                <li><a href="mascotas.html">Zagorso</a></li>
+                <li><a href="mascotas.html">Pitagoras</a></li>
+            </ul>
+        </li>
+
+        <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+
+    <div class="nav-right">
+        <button class="buy-btn" onclick="location.href='index.html'">HOME</button>
+        <button class="buy-btn" onclick="location.href='donaciones.html'">DONATIONS</button>
+        <i class="bi bi-search"></i>
+        <span>ACCOUNT ▼</span>
+    </div>
+</nav>
+</header>
+
+<main class="calculadora-main">
+    <div class="calculadora-container semitransparente">
+        <div class="calculadora-pantalla">
+            <input type="text" id="pantalla" placeholder="0" readonly>
+        </div>
+
+        <div class="calculadora-botones">
+            <button class="calc-btn limpiar" onclick="limpiar()">C</button>
+            <button class="calc-btn operador" onclick="agregar('/')">/</button>
+            <button class="calc-btn operador" onclick="agregar('*')">×</button>
+            <button class="calc-btn operador" onclick="borrar()">←</button>
+
+            <button class="calc-btn" onclick="agregar('7')">7</button>
+            <button class="calc-btn" onclick="agregar('8')">8</button>
+            <button class="calc-btn" onclick="agregar('9')">9</button>
+            <button class="calc-btn operador" onclick="agregar('-')">-</button>
+
+            <button class="calc-btn" onclick="agregar('4')">4</button>
+            <button class="calc-btn" onclick="agregar('5')">5</button>
+            <button class="calc-btn" onclick="agregar('6')">6</button>
+            <button class="calc-btn operador" onclick="agregar('+')">+</button>
+
+            <button class="calc-btn" onclick="agregar('1')">1</button>
+            <button class="calc-btn" onclick="agregar('2')">2</button>
+            <button class="calc-btn" onclick="agregar('3')">3</button>
+            <button class="calc-btn" onclick="agregar('.')">.</button>
+
+            <button class="calc-btn btn-cero" onclick="agregar('0')">0</button>
+            <button class="calc-btn igual" onclick="calcular()">=</button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-left">
+        <p>Made by Brandon</p>
+    </div>
+    <div class="footer-right">
+        <a href="https://github.com/nastex123/Module-HTML.git" target="_blank"><i class="bi bi-github"></i> Brandusio</a>
+        <a href="#"><i class="bi bi-instagram"></i> @Brandon_Rangell</a>
+        <a href="#"><i class="bi bi-twitter-x"></i> @NastexYT</a>
+        <a href="#"><i class="bi bi-spotify"></i> Spotify</a>
+    </div>
+</footer>
+
+<script src="calculadora.js"></script>
+</body>
+</html>
