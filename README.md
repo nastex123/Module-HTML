@@ -16,6 +16,7 @@ My personal portfolio with calculator, pet gallery, and donation page.
 ---
 
 ## 📁 File Structure
+```
 
 /
 ├── index.html # Home page
@@ -36,7 +37,7 @@ My personal portfolio with calculator, pet gallery, and donation page.
 ├── 5.jpg
 └── 6.jpg
 
-
+```
 ---
 
 ## ✨ Features
