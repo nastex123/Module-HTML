@@ -4,7 +4,7 @@ My personal portfolio with calculator, pet gallery, and donation page.
 
 ---
 
-## 🚀 Technologies
+##  Technologies
 
 - HTML5
 - CSS
@@ -13,7 +13,7 @@ My personal portfolio with calculator, pet gallery, and donation page.
 
 ---
 
-## 📁 File Structure
+##  File Structure
 ```
 
 /
@@ -51,7 +51,7 @@ My personal portfolio with calculator, pet gallery, and donation page.
 
 ---
 
-## 📄 Pages
+##  Pages
 
 | Page | Description |
 |------|-------------|
@@ -62,7 +62,7 @@ My personal portfolio with calculator, pet gallery, and donation page.
 
 ---
 
-## 🛠 How to Use
+##  How to Use
 
 1. Download or clone the repository
 2. Open `index.html` in your browser
@@ -70,7 +70,7 @@ My personal portfolio with calculator, pet gallery, and donation page.
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
 | Name | Role |
 |------|------|
